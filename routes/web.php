@@ -18,7 +18,7 @@ use App\Http\Controllers\Frontend\ProductTrackController;
 use App\Http\Controllers\Frontend\ReviewController;
 use App\Http\Controllers\Frontend\UserMessageController;
 use App\Http\Controllers\Frontend\UserOrderController;
-use App\Http\Controllers\SecurityController;
+use App\Http\Controllers\secty\SectyController;
 use App\Http\Controllers\Frontend\UserVendorReqeustController;
 use App\Http\Controllers\Frontend\WishlistController;
 use App\Http\Controllers\ProfileController;
@@ -35,7 +35,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [HomeController::class, 'index'])->name('home');
+// Route::get('/', [HomeController::class, 'index'])->name('home');
 
 
 Route::middleware('auth')->group(function () {
@@ -173,3 +173,9 @@ Route::group(['prefix' => 'user', 'as' => 'user.'], function(){
 });
 
 
+/**
+ * secty www.cs.com
+ */
+ Route::controller(SectyController::class)->group(function(){
+    Route::get('/', 'index')->name('secty.index');
+});
