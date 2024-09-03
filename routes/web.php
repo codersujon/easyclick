@@ -35,7 +35,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('/', [HomeController::class, 'index'])->name('home');
 
 
 Route::middleware('auth')->group(function () {
@@ -173,9 +173,9 @@ Route::group(['prefix' => 'user', 'as' => 'user.'], function(){
 });
 
 
-/**
- * secty www.cs.com
- */
- Route::controller(SectyController::class)->group(function(){
-    Route::get('/', 'index')->name('secty.index');
-});
+// /**
+//  * secty www.cs.com
+//  */
+//  Route::controller(SectyController::class)->group(function(){
+//     Route::get('/', 'index')->name('secty.index');
+// });
