@@ -30,7 +30,7 @@
                 </header>
                 <!-- card body -->
                 <div class="px-8 py-1">
-                    <form class="max-w-sm mx-auto space-y-3 p-5 pt-0" action="../step4.php" method="POST">
+                    <form class="max-w-sm mx-auto space-y-3 pt-0" action="../step4.php" method="POST">
                         <fieldset>
                                 <!-- company name -->
                                 <div class="mb-5">
@@ -39,7 +39,7 @@
                                         Name</label>
                                     <input type="text" id="cmpyName" name="cmpyName"
                                         class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light"
-                                        required />
+                                        required placeholder="Enter company name"/>
                                 </div>
 
                                 <!-- mobile number -->
@@ -49,7 +49,7 @@
                                         Number</label>
                                     <input type="text" id="mobile" name="mobile"
                                         class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light"
-                                        required />
+                                        required placeholder="Ex: 01680******" minlength="11" maxlength=11/>
                                 </div>
 
                                 <!-- purchase code -->
@@ -59,20 +59,22 @@
                                         Code</label>
                                     <input type="text" id="purchasecode" name="purchasecode"
                                         class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light"
-                                        required />
+                                        required placeholder="Enter purchase code"/>
                                 </div>
 
                                 <!-- Submit -->
                                 <button type="submit" name="submit"
-                                    class="text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                                    class="text-white bg-blue-600 mb-2 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                                     Submit
                                 </button>
+                                <p>If you neeed any help with installation, please contact <a href="mailto:support@codexlabbd.com"
+                                class="text-blue-600"><strong>support@codexlabbd.com</strong></a></p>
                         </fieldset>
                     </form>
                 </div>
                 <!-- card footer -->
                 <hr>
-                <div class="text-center py-4">
+                <div class="text-center pt-2 pb-4">
                     <p>Copyright &copy; <a href="https://codexlabbd.com/" class="text-blue-600 border-l font-bold"
                             target="_blank">CodexlabBD</a>. All Rights Reserved.</p>
                 </div>
