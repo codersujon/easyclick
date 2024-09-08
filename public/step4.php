@@ -9,7 +9,7 @@
 
          /* API Handle End */
 
-        if($purchase_code == "Y9hta9huC5M4QtZJ1zPAUQ"){
+        if($purchase_code == "4h;Gw-ES&k>-6[?,b-dT/].-"){
             unlink('./install/index.php');
             unlink('./install/step2.php');
             unlink('./install/step3.php');

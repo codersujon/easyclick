@@ -49,7 +49,7 @@
                                         Number</label>
                                     <input type="text" id="mobile" name="mobile"
                                         class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light"
-                                        required placeholder="Ex: 01680******" minlength="11" maxlength=11/>
+                                        required placeholder="Ex: 01680******" minlength="11" maxlength="11"/>
                                 </div>
 
                                 <!-- purchase code -->
@@ -59,7 +59,7 @@
                                         Code</label>
                                     <input type="text" id="purchasecode" name="purchasecode"
                                         class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light"
-                                        required placeholder="Enter purchase code"/>
+                                        required placeholder="Enter purchase code" minlength="20" maxlength="24"/>
                                 </div>
 
                                 <!-- Submit -->
