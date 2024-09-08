@@ -24,7 +24,7 @@
                 <!-- card header -->
                 <header class="text-center px-5 pb-5">
                     <!-- card name -->
-                    <h3 class="text-xl font-bold mb-1 text-indigo-600">HasnaGlow Auto Installer</h3>
+                    <h3 class="text-xl font-bold mb-1 text-blue-600">HasnaGlow Auto Installer</h3>
                 </header>
                 <hr>
 
@@ -75,7 +75,7 @@
                             <br/>
 
                             <h4 class="text-xl mb-6 text-green-600">Great! System Test Completed. You can run HasnaGlow on your server. Click Continue For Next Step.</h4>
-                            <a href="step3.php" class="font-semibold text-sm items-center justify-center px-3 py-2 border border-transparent rounded leading-5 shadow transition duration-150 ease-in-out w-full bg-indigo-500 hover:bg-indigo-600 text-white focus:outline-none focus-visible:ring-2 border-l">Continue</a>
+                            <a href="step3.php" class="font-semibold text-sm items-center justify-center px-3 py-2 border border-transparent rounded leading-5 shadow transition duration-150 ease-in-out w-full bg-blue-600 hover:bg-blue-700 text-white focus:outline-none focus-visible:ring-2 border-l">Continue</a>
                         
                             <?php else: ?>
 

@@ -29,18 +29,18 @@
                     <!-- card name -->
                     <h3 class="text-xl font-bold text-gray-900 mb-1">HasnaGlow Auto Installer</h3>
                     <div class="text-sm font-medium text-gray-500">Please read the license agreement before installation: <br> 
-                        <a href="" class="text-indigo-600">Read Agreement</a>
+                        <a href="" class="text-blue-600">Read Agreement</a>
                     </div>
                 </header>
                 <!-- card body -->
                 <div class="text-center px-8">
                     <form class="space-y-3">
-                        <a href="step2.php" class="font-semibold text-sm inline-flex items-center justify-center px-3 py-2 border border-transparent rounded leading-5 shadow transition duration-150 ease-in-out w-full bg-indigo-500 hover:bg-indigo-600 text-white focus:outline-none focus-visible:ring-2 border-l">Accept and Continue</a>
+                        <a href="step2.php" class="font-semibold text-sm inline-flex items-center justify-center px-3 py-2 border border-transparent rounded leading-5 shadow transition duration-150 ease-in-out w-full bg-blue-600 hover:bg-blue-700 text-white focus:outline-none focus-visible:ring-2 border-l">Accept and Continue</a>
                     </form>
                 </div>
                 <!-- card footer -->
                  <div class="text-center py-3">
-                    <p>If you neeed any help with installation, please contact <a href="mailto:support@hasnaglow.com" class="text-indigo-600"><strong>support@hasnaglow.com</strong></a></p>
+                    <p>If you neeed any help with installation, please contact <a href="mailto:support@hasnaglow.com" class="text-blue-600"><strong>support@hasnaglow.com</strong></a></p>
                     <p><strong>$5 charge applicable</strong></p>
                  </div>
                  <hr>
