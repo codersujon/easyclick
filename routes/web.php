@@ -179,3 +179,11 @@ Route::group(['prefix' => 'user', 'as' => 'user.'], function(){
 //  Route::controller(SectyController::class)->group(function(){
 //     Route::get('/', 'index')->name('secty.index');
 // });
+
+Route::get('/cc', function() {
+    Artisan::call('config:clear');
+    Artisan::call('cache:clear');
+    Artisan::call('route:clear');
+    Artisan::call('view:clear');
+    return "Cleared!";
+});

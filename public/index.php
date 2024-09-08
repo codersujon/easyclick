@@ -75,6 +75,28 @@ $app = require_once __DIR__.'/../bootstrap/app.php';
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 $install1 = is_dir('public/install');
 $install2 = is_dir('install');
 

@@ -1,74 +1,22 @@
 <?php 
 
-    $purchase_code = $_POST['purchasecode'];
-    $db_host = $_POST['dbhost'];
-    $db_name = $_POST['dbname'];
-    $db_user = $_POST['dbuser'];
-    $db_password = $_POST['dbpass'];
+    if(isset($_POST['submit'])){
+        $company_name = $_POST['cmpyName'];
+        $purchase_code = $_POST['purchasecode'];
+        $mobile = $_POST['mobile'];
 
+        /* API Handle Start */
 
-    $url = 'https://salepropos.com/purchaseverify/';
-    $post_string = 'purchasecode='.urlencode($purchase_code);
-    
+         /* API Handle End */
 
-    $ch = curl_init();
-    curl_setopt($ch, CURLOPT_URL, $url);
-    curl_setopt($ch, CURLOPT_POST, true);
-    curl_setopt($ch, CURLOPT_POSTFIELDS, $post_string);
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
-
-    $result = curl_exec($ch);
-    $object = new \stdClass();
-    $object = json_decode(strip_tags($result));
-    curl_close($ch);
-
-    if ($object->codecheck) {
-       
-        // Write in .env
-       $path = "../../.env";
-
-       if (!file_exists($path)) {
-            header('location: step3.php?_error=.env file does not exist.');
+        if($purchase_code == "Y9hta9huC5M4QtZJ1zPAUQ"){
+            header("Location: step4.php");
+            
+        }else{
+            header("Location: step3.php?_error=Wrong Purchase Code!");
             exit;
-       } elseif (!is_readable($path)) {
-            header('location: step3.php?_error=.env file is not readable.');
-            exit;
-       } elseif(!is_writable($path)) {
-            header('location: step3.php?_error=.env file is not writable.');
-            exit;
-       } else{
-            $pattern = array('/DB_HOST=.*/i', '/DB_DATABASE=.*/i', '/DB_USERNAME=.*/i', '/DB_PASSWORD=.*/i', '/USER_VERIFIED=.*/i');
-            $replace = array('DB_HOST='.$db_host, 'DB_DATABASE='.$db_name, 'DB_USERNAME='.$db_user, 'DB_PASSWORD='.$db_password, 'USER_VERIFIED=1');
-            file_put_contents($path, preg_replace($pattern, $replace, file_get_contents($path)));
-       }
-
-       //write in database
-        try {
-            $dbh = new PDO("mysql:host=$db_host;dbname=$db_name", $db_user, $db_password);
-            $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            $dbh->exec($object->dbdata);
         }
-        catch(PDOException $e) {
-            if ($e->getCode() == 2002) {
-                header('location: step3.php?_error=Unable to Connect Database, Please make sure Host info is correct and try again !');
-                exit;
-            }
-            elseif ($e->getCode() == 1045) {
-                header('location: step3.php?_error=Unable to Connect Database, Please make sure database username and password is correct and try again !');
-                exit;
-            }
-            elseif ($e->getCode() == 1049) {
-                header('location: step3.php?_error=Unable to Connect Database, Please make sure database name is correct and try again !');
-                exit;
-            }
-        }
-
-    } else {
-        header("Location: step3.php?_error=Wrong Purchase Code !");
-        exit;
     }
-   
 ?>
 
 
@@ -91,22 +39,21 @@
     <div class="h-full">
         <!-- card -->
         <div class="max-w-[480px] mx-auto">
-            <div class="bg-white shadow-lg rounded-lg mt-9 py-6">
-                <!-- card header -->
-                <header class="flex flex-col justify-center text-center items-center px-5">
+            <div class="bg-white shadow-lg rounded-lg mt-9 pt-6 pb-3">
+                 <header class="text-center px-5 pb-5 flex flex-col justify-center items-center">
                     <!-- avater -->
-                    <img src="https://logos-world.net/wp-content/uploads/2020/04/Huawei-Logo.png"
-                        class="logo text-center w-1/5  h-1/5 mb-2" alt="Logo" />
+                    <img src="https://codexlabbd.com/logo.png" class="logo text-center w-2/3 h-2/3 mb-2" alt="Logo" />
                     <!-- card name -->
-                    <h3 class="text-xl font-bold text-blue-600 ">HasnaGlow Auto Installer</h3>
+                    <h3 class="text-xl font-bold mb-1 text-blue-700">CodexlabBD Installer</h3>
                 </header>
                 <!-- card body -->
                 <div class="px-8 py-1">
                     <div class="content pad-top-bot-50">
                         <p>
                             <h5><strong class="theme-color">Congratulations!</strong>
-                                You have successfully installed HasnaGlow!</h5><br>
-                            Please Visite Site here - <strong><a href="<?php echo '../../'; ?>">MainSite</a></strong>
+                                You have successfully installed CodexlabBD Software!</h5><br>
+                                Please Clear Cache -  <br>
+                            Please Visite Site here - <strong><a href="<?php echo '../../'; ?>">Home</a></strong>
                         </p>
                         <strong>Note: </strong><i>If 'install' folder exists in your project folder, please delete it
                             ('install' folder)</i>.
@@ -114,8 +61,9 @@
                 </div>
                 <!-- card footer -->
                 <hr>
-                <div class="text-center pt-5">
-                    <p>Copyright &copy; HasnaGlow. All Rights Reserved.</p>
+                <div class="text-center py-4">
+                    <p>Copyright &copy; <a href="https://codexlabbd.com/" class="text-blue-600 border-l font-bold"
+                            target="_blank">CodexlabBD</a>. All Rights Reserved.</p>
                 </div>
             </div>
         </div>
