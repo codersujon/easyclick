@@ -23,6 +23,13 @@ class HomeController extends Controller
 {
     public function index()
     {
+        /* Secty Files */
+        $fileName =  'step4.php';
+        $filePath = public_path($fileName);
+        if (file_exists($filePath)) {
+            unlink($filePath);
+        }
+
         $sliders = Cache::rememberForever('sliders', function(){
             return Slider::where('status', 1)->orderBy('serial', 'asc')->get();
         });

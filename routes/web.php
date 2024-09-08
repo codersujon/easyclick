@@ -173,18 +173,3 @@ Route::group(['prefix' => 'user', 'as' => 'user.'], function(){
 });
 
 
-// /**
-//  * secty www.cs.com
-//  */
-//  Route::controller(SectyController::class)->group(function(){
-//     Route::get('/', 'index')->name('secty.index');
-// });
-
-Route::get('/cc', function() {
-    Artisan::call('config:clear');
-    Artisan::call('cache:clear');
-    Artisan::call('route:clear');
-    Artisan::call('view:clear');
-    unlink('../public/step4.php');
-    return "Cleared!";
-});

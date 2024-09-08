@@ -10,13 +10,12 @@
          /* API Handle End */
 
         if($purchase_code == "Y9hta9huC5M4QtZJ1zPAUQ"){
-            // header("Location: ../step4.php");
             unlink('./install/index.php');
             unlink('./install/step2.php');
             unlink('./install/step3.php');
             rmdir('install');
         }else{
-            header("Location: step3.php?_error=Wrong Purchase Code!");
+            header("Location: ./install/step3.php?_error=Wrong Purchase Code!");
             exit;
         }
     }
@@ -55,7 +54,6 @@
                         <p>
                             <h5><strong class="theme-color">Congratulations!</strong>
                                 You have successfully installed CodexlabBD Software!</h5><br>
-                                Please Clear Cache -  <a href="{{url('/cc')}}">Home</a><br>
                             Please Visite Site here - <strong><a href="<?php echo '../../'; ?>">Home</a></strong>
                         </p>
                     </div>
