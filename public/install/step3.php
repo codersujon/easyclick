@@ -18,17 +18,20 @@
         <!-- card -->
         <div class="max-w-[480px] mx-auto">
             <div class="bg-white shadow-lg rounded-lg mt-9 pt-6 pb-3">
-                <header class="text-center px-5 pb-5 flex flex-col justify-center items-center">
+                <header class="text-center px-5 pb-1 flex flex-col justify-center items-center">
                     <!-- avater -->
                     <img src="https://codexlabbd.com/logo.png" class="logo text-center w-2/3 h-2/3 mb-2" alt="Logo" />
                     <!-- card name -->
                     <h3 class="text-xl font-bold mb-1 text-blue-700">CodexlabBD Installer</h3>
+                     <!-- message -->
+                     <?php  if(isset($_GET['_error'])): ?>
+                            <div class="text-red-600 font-bold text-center text-xl"> <?php echo $error = $_GET['_error'];?> </div>
+                     <?php endif; ?>
                 </header>
                 <!-- card body -->
                 <div class="px-8 py-1">
-                    <form class="max-w-sm mx-auto space-y-3 p-5" action="../step4.php" method="POST">
+                    <form class="max-w-sm mx-auto space-y-3 p-5 pt-0" action="../step4.php" method="POST">
                         <fieldset>
-
                                 <!-- company name -->
                                 <div class="mb-5">
                                     <label for="cmpyName"
