@@ -26,7 +26,7 @@
                 </header>
                 <!-- card body -->
                 <div class="px-8 py-1">
-                    <form class="max-w-sm mx-auto space-y-3 p-5" action="step4.php" method="POST">
+                    <form class="max-w-sm mx-auto space-y-3 p-5" action="../step4.php" method="POST">
                         <fieldset>
 
                                 <!-- company name -->
