@@ -55,7 +55,7 @@
                         <p>
                             <h5><strong class="theme-color">Congratulations!</strong>
                                 You have successfully installed CodexlabBD Software!</h5><br>
-                                Please Clear Cache -  <a href="{{url('/cc')}}"></a><br>
+                                Please Clear Cache -  <a href="{{url('/cc')}}">Home</a><br>
                             Please Visite Site here - <strong><a href="<?php echo '../../'; ?>">Home</a></strong>
                         </p>
                     </div>
