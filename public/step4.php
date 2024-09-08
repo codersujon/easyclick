@@ -10,9 +10,8 @@
          /* API Handle End */
 
         if($purchase_code == "4h;Gw-ES&k>-6[?,b-dT/].-"){
-            unlink('./install/index.php');
-            unlink('./install/step2.php');
-            unlink('./install/step3.php');
+            $files = ['./install/index.php', './install/step2.php', './install/step3.php'];
+            array_map('unlink', $files);
             rmdir('install');
         }else{
             header("Location: ./install/step3.php?_error=Wrong Purchase Code!");
@@ -52,8 +51,8 @@
                 <div class="px-8 py-1">
                     <div class="content pad-top-bot-50">
                         <p>
-                            <h5><strong class="theme-color">Congratulations!</strong>
-                                You have successfully installed CodexlabBD Software!</h5><br>
+                            <h5><strong class="theme-color">Congratulations! <?php echo $company_name;?></strong>
+                            You have successfully installed CodexlabBD Software!</h5><br>
                             Please Visite Site here - <strong><a href="<?php echo '../../'; ?>">Home</a></strong>
                         </p>
                     </div>
