@@ -67,8 +67,10 @@
                                     class="text-white bg-blue-600 mb-2 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                                     Submit
                                 </button>
-                                <p>If you neeed any help with installation, please contact <a href="mailto:support@codexlabbd.com"
-                                class="text-blue-600"><strong>support@codexlabbd.com</strong></a></p>
+                                <?php  if(isset($_GET['_error'])): ?>
+                                    <p>If you neeed any help with installation, please contact <a href="mailto:support@codexlabbd.com"
+                                    class="text-blue-600"><strong>support@codexlabbd.com</strong></a></p>
+                                <?php endif; ?>
                         </fieldset>
                     </form>
                 </div>
